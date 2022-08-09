@@ -1,0 +1,17 @@
+<!-- This is the launch file for the nodes and files running on the NUC:
+	    initiate severale SSH connections
+	    roscore
+	    realsense_both.launch
+	    motors_and_integration.launch
+	    (in future, nodes for serial commands to Teensy
+	    and a node that listens to the Swift Piksi GPS module)-->
+
+<launch>
+    <!-- roscore will launch when roslaunch is called>
+
+    <!-- launch realsense_both.launch -->
+    <include file="$(find cameras)/launch/realsense_both.launch"/>
+
+    <!-- launch motors_and_integration.launch -->
+    <include file="$(find motor_control_circ)/launch/motors_and_integration.launch>
+</launch>
